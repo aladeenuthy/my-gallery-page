@@ -1,0 +1,111 @@
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: 'Montserrat', sans-serif;
+}
+header{
+ margin-top: 50px;
+}
+p{
+  font-size: 14px;
+  line-height: 17px;
+}
+header p{
+ color: #A9A9A9;
+}
+header h4{
+ font-size: 24px;
+}
+header img{
+ width: 150px;
+ border-radius: 16px;
+}
+.boxs{
+ width: 400px;
+ margin: 0 auto;
+ margin-top: 20px;
+
+}
+.boxs li{
+ background: #E5E5E5;
+border-radius: 12px;
+flex-basis: 100px;
+}
+.boxs h5{
+ font-family: Montserrat;
+ font-size: 18px;
+ line-height: 22px;
+ color: #4E5150;
+}
+.boxs p, .tag{
+ color: #BDBDBD;
+}
+main{
+ margin-top: 60px;
+}
+.c{
+ width: 70%;
+ margin: 0 auto;
+ margin-bottom: 60px;
+ display: grid;
+ column-gap: 30px;
+ row-gap: 25px;
+ grid-template-columns: repeat(3, 1fr);
+ grid-template-rows: repeat(3, 250px);
+ grid-template-areas: 
+ "bed couch couch"
+ "tub tub lamp"
+ "tables flower lamp";
+}
+.gallery{
+ background-size: cover;
+ border-radius: 12px;
+}
+.bed{
+ grid-area: bed; 
+ background-image: url("images/photo1.png");
+}
+.couch{
+ grid-area: couch;
+ background-image: url("images/photo2.png");
+ background-position: right center;
+}
+.tub{
+ grid-area: tub;
+ background-image: url("images/photo3.png");
+ background-position: bottom center;
+}
+.lamp{
+ grid-area: lamp;
+ background-image: url("images/photo4.png");
+ border-top-left-radius: 24px;
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 25px;
+ border-top-right-radius: 22px;
+}
+.tables{
+ grid-area: tables;
+ background-image: url("images/photo6.png");
+}
+.flower{
+ grid-area: flower;
+ background-image: url("images/photo5.png");
+}
+
+@media (max-width:700px){
+ .c{
+  width: 90%;
+  column-gap: 15px;
+  row-gap: 15px;
+  grid-template-rows: repeat(3, 110px);
+  
+ }
+ .boxs{
+  width: 345px;
+ }
+ .lamp{
+  border-radius: 12px;
+ }
+ 
+}
